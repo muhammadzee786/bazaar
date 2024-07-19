@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface laraclassifiedrnTests : XCTestCase
+@interface CurebazaarTests : XCTestCase
 
 @end
 
-@implementation laraclassifiedrnTests
+@implementation CurebazaarTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {

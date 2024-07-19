@@ -1,4 +1,4 @@
-package com.laraclassifiedrn.newarchitecture.components;
+package com.jorasingh.curebazaar.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

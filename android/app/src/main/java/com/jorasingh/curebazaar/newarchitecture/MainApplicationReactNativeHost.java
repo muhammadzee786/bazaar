@@ -1,4 +1,4 @@
-package com.laraclassifiedrn.newarchitecture;
+package com.jorasingh.curebazaar.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.laraclassifiedrn.BuildConfig;
-import com.laraclassifiedrn.newarchitecture.components.MainComponentsRegistry;
-import com.laraclassifiedrn.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.jorasingh.curebazaar.BuildConfig;
+import com.jorasingh.curebazaar.newarchitecture.components.MainComponentsRegistry;
+import com.jorasingh.curebazaar.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

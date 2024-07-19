@@ -48,7 +48,7 @@ callbacks.updateLanguages = (state, action) => {
       state.languageCodeDefault = r.abbr
     }
     return {
-      code: r.abbr,
+      code: r.abbr ?? r.code,
       name: r.name,
       direction: r.direction,
       default: isDefault
