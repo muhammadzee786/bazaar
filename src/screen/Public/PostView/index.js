@@ -7,7 +7,8 @@ import {
   SafeAreaView,
   ScrollView,
   View,
-  useWindowDimensions
+  useWindowDimensions,
+  Linking
 } from 'react-native'
 import { Container, Content, Text, Icon } from '@component/Basic'
 
@@ -176,15 +177,42 @@ class PostView extends React.Component {
   }
 
   contactEmail() {
-    openEmail(this.state.post.email)
+    // openEmail(this.state.post.email)
+    const url = 'mailto:';
+
+    Linking.canOpenURL(url)
+    .then((supported) => {
+      if (!supported) {
+        Alert.alert('Error', 'Email app is not installed on this device');
+      } else {
+        return Linking.openURL(url);
+      }
+    })
+    .catch((err) => console.error('An error occurred', err));
   }
 
   contactPhone() {
-    openPhone(this.state.post.phone)
+    // openPhone(this.state.post.phone)
+    const url = 'content://contacts/people/';
+
+    Linking.canOpenURL(url)
+    .then((supported) => {
+      if (!supported) {
+        Alert.alert('Error', 'Contacts app is not accessible on this device');
+      } else {
+        return Linking.openURL(url);
+      }
+    })
+    .catch((err) => console.error('An error occurred', err));
   }
 
   contactWhatsApp() {
-    openWhatsApp(this.state.post.phone)
+    // openWhatsApp(this.state.post.phone)
+    const url = 'whatsapp://send?text=Hello%20World';
+    Linking.openURL(url)
+    .catch(() => {
+      alert('Make sure WhatsApp is installed on your device');
+    });
   }
 
   renderMainImage() {
@@ -382,7 +410,6 @@ class PostView extends React.Component {
     } else if (this.state.tabSelected === 'enquiry') {
       tabContent = this.renderEnquiry()
     }
-
     return (
       <>
         <ScrollView>

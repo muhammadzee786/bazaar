@@ -36,7 +36,7 @@ const Item = ({ item, index, toggleFavourite }) => {
         <Text style={styles.itemDate} numberOfLines={1}>{item.city.name}</Text>
       </View>
     )
-  }
+  } 
   return (
     <Button style={styles.item} onPress={onPress}>
       <View style={styles.itemTop}>
